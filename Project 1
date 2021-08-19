@@ -1,0 +1,24 @@
+/* Task: Вывести заданное количество случайных чисел 
+с переходом и без перехода на новую строку */
+
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        //класс запрашивает количество случайных чисел, генерирует их и выводт на экран
+        System.out.println("Сколько случайных чисел нужно вывести? ");
+        Scanner scan = new Scanner(System.in);
+        Integer num = scan.nextInt();
+        Integer a; //переменная для рандомного числа
+        Integer newline; //переменная для рандомного перевода на новую строчку
+        for (int i = 1; i <=num; i++) {
+            newline = (int) (Math.random() * 10);
+            a = (int) (Math.random() * 10);
+            if (newline >= 0 && newline <= 5)
+                System.out.print("Число " + i + ": " + a + " ");
+            if (newline > 5 && newline <= 10)
+                System.out.println("Число " + i + ": " + a);
+        }
+    }
+}
