@@ -1,0 +1,17 @@
+/* Task: Ввести пароль из командной строки и сравнить его со строкой-образцом.*/
+
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        String sample = "12345 qwerty"; //строка-образец
+        System.out.print("Пароль: ");
+        Scanner scan = new Scanner(System.in);
+        String password = scan.nextLine();
+        if (password.equals(sample)) {
+            System.out.println("Пароли совпадают");
+        } else {
+            System.out.println("Пароли НЕ совпадают");
+        }
+    }
+}
